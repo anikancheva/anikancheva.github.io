@@ -70,8 +70,7 @@ function getResult(total, provided) {
             }
         }
     }
-    console.log(dollars +" " + cents)
-
+    
     while (dollars > 0) {
         if (parseInt(dollars / 100) > 0) {
             resultArray["bills"]["100"] += parseInt(dollars / 100);
