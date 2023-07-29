@@ -49,13 +49,13 @@ function getResult(total, provided) {
         'coins': { '25': 0, '10': 0, '5': 0, '1': 0 }
     };
 
-    let change = parseFloat((provided - total).toFixed(2));
+    let change = (provided - total).toFixed(2);
     resultArray['change'] = change;
     if (change <= 0) {
         return resultArray;
     }
 
-    let parts = change.toString().split('.');
+    let parts = change.split('.');
     let dollars = parts[0];
     let cents = null;
     if (parts.length == 2) {
@@ -70,6 +70,7 @@ function getResult(total, provided) {
             }
         }
     }
+    console.log(dollars +" " + cents)
 
     while (dollars > 0) {
         if (parseInt(dollars / 100) > 0) {
@@ -88,7 +89,7 @@ function getResult(total, provided) {
             resultArray["bills"]["5"] += parseInt(dollars / 5);
             dollars = parseInt(dollars % 5);
         } else {
-            resultArray["bills"]["1"] += dollars;
+            resultArray["bills"]["1"] += parseInt(dollars);
             break;
         }
     }
@@ -105,7 +106,7 @@ function getResult(total, provided) {
                 resultArray["coins"]["5"] += parseInt(cents / 5);
                 cents = parseInt(cents % 5);
             } else {
-                resultArray["coins"]["1"] += cents;
+                resultArray["coins"]["1"] += parseInt(cents);
                 break;
             }
         }
