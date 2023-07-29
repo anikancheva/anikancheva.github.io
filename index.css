@@ -1,0 +1,79 @@
+:root {
+    --bckg-color: rgb(171, 220, 251);
+    --main-color: rgb(135, 14, 14);
+    --error-bckg: rgb(249, 173, 173);
+    --error-highlight: rgb(210, 5, 5);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--main-color);
+    background-color: var(--bckg-color);
+    text-align: center;
+
+}
+
+form {
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    padding: 5px;
+    width: fit-content;
+    margin: auto;
+}
+
+label {
+    margin: 0.5em;
+}
+
+input {
+    margin: 0.5em;
+    font-family: inherit;
+    color: var(--main-color);
+    accent-color: var(--main-color);
+}
+
+#submitButton {
+    display: block;
+    margin: 0.5em auto;
+    font-family: inherit;
+    color: var(--bckg-color);
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.error {
+    border: 3px solid var(--error-highlight);
+    border-radius: 3px;
+    background-color: var(--error-bckg)
+}
+
+#errMsg {
+    visibility: hidden;
+    color: var(--error-highlight);
+}
+
+table,
+th,
+td {
+    border: 1px solid var(--main-color);
+    border-collapse: collapse;
+    padding: 5px;
+    width: 30%;
+    margin: auto;
+}
+
+#changeText {
+    display: inline-block;
+    font-weight: bold;
+    margin: 0.5em;
+}
+
+#change {
+    display: inline-block;
+    font-weight: bold;
+}
+
+#change::before {
+    content: "$";
+}

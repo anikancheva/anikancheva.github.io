@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap">
+    <link rel="icon" href="cash-register-icon.png">
+    <script src="index.js" type="module"></script>
+    <title>Cash Register</title>
+</head>
+
+<body>
+    <h1>Cash Register</h1>
+    <form action="" method="POST">
+        <label>
+            Total Amount
+            <input type="text" name="total" placeholder="$xxx.xx">
+        </label>
+        <label>
+            Amount Provided
+            <input type="text" name="provided" placeholder="$xxx.xx">
+        </label>
+        <p id="errMsg">Both fields must contain a valid amount!</p>
+        <button type="submit" id="submitButton">Calculate</button>
+    </form>
+    <span>
+        <p id="changeText">Change:</p>
+        <p id="change">0.00</p>
+    </span>
+    <table id="denominations" hidden>
+        <thead>
+            <tr>
+                <th>Denomination</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>$100</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>$50</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>$20</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>$10</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>$5</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>$1</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>$0.25</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>$0.10</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>$0.05</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>$0.01</th>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
